@@ -37,7 +37,6 @@ echo $build_dir/nginx
 
 ls $build_dir/nginx
 cp $build_dir/nginx/sbin/nginx /app/nginx
-chmod +x /app/nginx/nginx
 
 echo "Nginx Version"
 pwd
