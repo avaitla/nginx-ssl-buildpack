@@ -37,12 +37,10 @@ echo $build_dir/nginx
 
 ls $build_dir/nginx
 cp $build_dir/nginx/sbin/nginx /app/nginx
-file /app/nginx/nginx
 
 echo "Nginx Version"
 pwd
 ls
-/app/nginx/nginx -v
 
 # Add to PATH
 mkdir -p $build_dir/.profile.d
