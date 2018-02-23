@@ -38,7 +38,9 @@ echo $build_dir/nginx
 ls $build_dir/nginx
 cp $build_dir/nginx/sbin/nginx /app/nginx
 
+
 echo "Nginx Version"
+$build_dir/nginx/sbin/nginx -v
 pwd
 ls
 
