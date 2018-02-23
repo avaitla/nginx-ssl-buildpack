@@ -27,7 +27,7 @@ status "Compiling nginx"
   --with-http_stub_status_module
 
 status "Installing nginx"
-make install
+make install --silent
 
 # Copy the installation where it'll persist
 mv /app/nginx $build_dir/nginx
@@ -36,6 +36,13 @@ echo "Build Dir"
 echo $build_dir/nginx
 
 ls $build_dir/nginx
+cp $build_dir/nginx/sbin/nginx /app/nginx
+chmod +x /app/nginx/nginx
+
+echo "Nginx Version"
+pwd
+ls
+/app/nginx/nginx -v
 
 # Add to PATH
 mkdir -p $build_dir/.profile.d
